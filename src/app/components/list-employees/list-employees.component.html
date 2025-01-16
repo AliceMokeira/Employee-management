@@ -1,0 +1,31 @@
+
+<div class="container mt-5">
+    <button type="button" class="btn btn-primary" routerLink="/postEmployee">Add employee</button>
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">PhoneNumber</th>
+                <th scope="col">Email</th>
+                <th scope="col">Age</th>
+                <th scope="col">Department</th>
+                <th scope="col">Salary</th>
+              </tr>
+            </thead>
+        
+            <tbody *ngFor="let employee of employees">
+              <tr>
+                <td>{{ employee.id}}</td>
+                <td>{{ employee.name}}</td>
+                <td>{{ employee.phoneNumber}}</td>
+                <td>{{ employee.email}}</td>
+                <td>{{ employee.age}}</td>
+                <td>{{ employee.department}}</td>
+                <td>{{ employee.salary | currency : 'Ksh'}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
